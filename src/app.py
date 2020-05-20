@@ -23,7 +23,6 @@ def dequeue():
 def save():
     f = open("queue.json", "w+")
     current_queue = queue.get_queue()
-    print(current_queue)
     f.write(json.dumps(current_queue))
     f.close()
     pass
@@ -33,7 +32,6 @@ def load():
     f = open('queue.json',) 
     queue_list = json.load(f)
     queue = Queue(current_queue = queue_list,mode = "FIFO")
-    print("Done")
     f.close() 
     pass 
         
